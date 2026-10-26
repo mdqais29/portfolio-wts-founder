@@ -631,13 +631,11 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: contrast(1.16) saturate(1.12) brightness(0.97);
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .moment-card:hover .moment-img {
-  transform: scale(1.05);
-  filter: contrast(1.22) saturate(1.2) brightness(1.02);
+  transform: scale(1.04);
 }
 
 /* Floating Star Doodles around Moments */
