@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 4. Subtle Scroll Reveal Animations
   const revealElements = document.querySelectorAll(
-    '.reel-card, .moment-card, .service-card, .wts-nova-left, .footer-paper-sticker, .footer-middle-col'
+    '.moment-card, .service-card, .wts-nova-left, .footer-paper-sticker, .footer-middle-col'
   );
 
   if ('IntersectionObserver' in window) {
