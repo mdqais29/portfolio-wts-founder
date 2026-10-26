@@ -98,4 +98,28 @@ document.addEventListener('DOMContentLoaded', () => {
       revealObserver.observe(el);
     });
   }
+
+  // 5. Mobile Horizontal Slider Scroll Buttons
+  function setupSliderScroll(prevId, nextId, containerId) {
+    const prevBtn = document.getElementById(prevId);
+    const nextBtn = document.getElementById(nextId);
+    const container = document.getElementById(containerId);
+
+    if (prevBtn && nextBtn && container) {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const scrollAmount = container.clientWidth * 0.75;
+        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const scrollAmount = container.clientWidth * 0.75;
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+    }
+  }
+
+  setupSliderScroll('reelsPrevBtn', 'reelsNextBtn', 'reelsGrid');
+  setupSliderScroll('momentsPrevBtn', 'momentsNextBtn', 'momentsGrid');
 });

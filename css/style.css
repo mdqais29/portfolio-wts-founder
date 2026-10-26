@@ -54,6 +54,7 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
 }
 
 body {
@@ -61,7 +62,12 @@ body {
   background-color: var(--bg-cream);
   color: var(--text-dark);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+/* Mobile Slider Arrow Buttons (Hidden on desktop) */
+.mobile-slider-arrows {
+  display: none;
 }
 
 img {
@@ -1236,11 +1242,83 @@ button {
     --header-height: 64px;
   }
 
-  /* Prevent any horizontal page overflow */
-  html, body {
-    overflow-x: hidden;
+  /* Prevent horizontal overflow while keeping position: sticky functional */
+  html {
+    overflow-x: clip;
+    width: 100%;
+  }
+
+  body {
+    overflow-x: clip;
     width: 100%;
     position: relative;
+  }
+
+  /* Sticky Header on Mobile */
+  .site-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(247, 244, 236, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Mobile Slider Arrows */
+  .mobile-slider-arrows {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .btn-slider-arrow {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .btn-slider-arrow svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Dark mode arrows (Reels) */
+  .btn-slider-arrow.prev {
+    background-color: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    color: #FFFFFF;
+  }
+
+  .btn-slider-arrow.next {
+    background-color: var(--accent-lime);
+    border: none;
+    color: #111111;
+  }
+
+  /* Light mode arrows (Moments) */
+  .btn-slider-arrow.prev.light {
+    background-color: transparent;
+    border: 1.5px solid rgba(17, 17, 17, 0.25);
+    color: #111111;
+  }
+
+  .btn-slider-arrow.next.light {
+    background-color: var(--accent-purple);
+    border: none;
+    color: #FFFFFF;
+  }
+
+  .btn-slider-arrow:active {
+    transform: scale(0.92);
   }
 
   .container {
