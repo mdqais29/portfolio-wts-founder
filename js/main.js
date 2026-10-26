@@ -71,4 +71,31 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // 4. Subtle Scroll Reveal Animations
+  const revealElements = document.querySelectorAll(
+    '.reel-card, .moment-card, .service-card, .wts-nova-left, .footer-paper-sticker, .footer-middle-col'
+  );
+
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      }
+    );
+
+    revealElements.forEach(el => {
+      el.classList.add('reveal-init');
+      revealObserver.observe(el);
+    });
+  }
 });

@@ -350,17 +350,17 @@ button {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 5.2vw, 4.4rem);
+  font-size: clamp(2.4rem, 4.3vw, 3.85rem);
   font-weight: 900;
-  line-height: 1.05;
+  line-height: 1.1;
   letter-spacing: -0.035em;
   color: #111111;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .hero-title .title-stories {
   color: var(--accent-purple);
-  display: inline-block;
+  display: inline;
 }
 
 .hero-title .title-connect-wrap {
@@ -371,10 +371,10 @@ button {
 
 .hero-title .lime-underline-svg {
   position: absolute;
-  bottom: -6px;
+  bottom: -4px;
   left: 0;
   width: 100%;
-  height: 14px;
+  height: 12px;
   pointer-events: none;
 }
 
@@ -447,6 +447,50 @@ button {
   transform: translateY(-2px);
 }
 
+.hero-social-buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Hero YouTube Logo Only Button */
+.btn-hero-youtube {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: #111111;
+  border: 1.5px solid #111111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-hero-youtube:hover {
+  background-color: #FF0000;
+  border-color: #FF0000;
+  color: #FFFFFF;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 22px rgba(255, 0, 0, 0.28);
+}
+
+.btn-hero-youtube svg {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-hero-youtube:hover svg {
+  transform: scale(1.12);
+}
+
+.btn-hero-youtube:active {
+  transform: scale(0.96);
+}
+
 /* Hero Right: Portrait Composition flush to bottom border */
 .hero-image-wrapper {
   position: relative;
@@ -513,26 +557,26 @@ button {
   position: relative;
   background-color: #1C1C1C;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.38s ease;
   cursor: pointer;
   display: block;
 }
 
 .reel-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(200, 255, 55, 0.5);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7);
+  transform: translateY(-8px) scale(1.018);
+  border-color: var(--accent-lime);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.7), 0 0 24px rgba(200, 255, 55, 0.22);
 }
 
 .reel-thumbnail {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reel-card:hover .reel-thumbnail {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 /* Reel Top Bar */
@@ -554,6 +598,12 @@ button {
   height: 18px;
   color: #FFFFFF;
   opacity: 0.9;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+}
+
+.reel-card:hover .reel-badge-icon {
+  transform: scale(1.2) rotate(-8deg);
+  color: var(--accent-lime);
 }
 
 /* Reel Bottom Bar */
@@ -574,6 +624,12 @@ button {
   width: 12px;
   height: 12px;
   color: #FFFFFF;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+}
+
+.reel-card:hover .reel-play-icon {
+  transform: scale(1.25);
+  color: var(--accent-lime);
 }
 
 .reel-view-count {
@@ -638,27 +694,27 @@ button {
   position: relative;
   border: 2px solid rgba(17, 17, 17, 0.18);
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14), 0 3px 8px rgba(0, 0, 0, 0.08);
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 .moment-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px) scale(1.02);
   border-color: var(--accent-purple);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22), 0 6px 14px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.22), 0 0 24px rgba(152, 84, 247, 0.2);
 }
 
 .moment-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.48s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .moment-card:hover .moment-img {
-  transform: scale(1.04);
+  transform: scale(1.055);
 }
 
-/* Floating Star Doodles around Moments */
+/* Floating Star Doodles around Moments with Ambient Motion */
 .moment-doodle-left {
   position: absolute;
   left: -24px;
@@ -666,6 +722,7 @@ button {
   width: 22px;
   height: 22px;
   color: var(--accent-lime);
+  animation: ambientFloat 4.6s ease-in-out infinite;
 }
 
 .moment-doodle-bottom-left {
@@ -675,6 +732,7 @@ button {
   width: 28px;
   height: 28px;
   color: var(--accent-purple);
+  animation: ambientFloat 5s ease-in-out infinite 0.6s;
 }
 
 .moment-doodle-right {
@@ -684,6 +742,7 @@ button {
   width: 24px;
   height: 24px;
   color: var(--accent-purple);
+  animation: ambientFloat 5.2s ease-in-out infinite 1.2s;
 }
 
 .moment-doodle-bottom-right {
@@ -693,6 +752,11 @@ button {
   width: 26px;
   height: 26px;
   color: var(--accent-lime);
+  animation: ambientFloat 4.8s ease-in-out infinite 1.8s;
+}
+
+.moments-sparkle-top {
+  animation: ambientPulse 3.6s ease-in-out infinite;
 }
 
 
@@ -796,49 +860,66 @@ button {
 .service-card {
   background-color: #FFFFFF;
   border-radius: 18px;
-  padding: 26px 24px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  padding: 28px 24px;
+  border: 1.5px solid rgba(17, 17, 17, 0.16);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px) scale(1.015);
+  border-color: var(--accent-purple);
+  box-shadow: 0 18px 36px rgba(152, 84, 247, 0.14), 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .service-icon-box {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background-color: rgba(152, 84, 247, 0.12);
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  background-color: #EFE8FC;
+  border: 1.5px solid rgba(152, 84, 247, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
-  color: var(--accent-purple);
+  margin-bottom: 18px;
+  color: #7928CA;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card:hover .service-icon-box {
+  transform: scale(1.1) rotate(5deg);
+  background-color: var(--accent-purple);
+  border-color: var(--accent-purple);
+  color: #FFFFFF;
 }
 
 .service-icon-box svg {
-  width: 22px;
-  height: 22px;
+  width: 23px;
+  height: 23px;
+  stroke-width: 2.3;
 }
 
 .service-title {
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 800;
+  letter-spacing: -0.015em;
   color: #111111;
   margin-bottom: 8px;
 }
 
 .service-desc {
-  font-size: 0.88rem;
-  line-height: 1.5;
-  color: var(--text-dark-muted);
+  font-size: 0.9rem;
+  line-height: 1.56;
+  color: #2D2D2D;
+  font-weight: 500;
 }
 
-/* Decorative Doodles for Nova */
+/* Decorative Doodles for Nova with Ambient Motion */
+.nova-burst-doodle {
+  animation: ambientPulse 3.2s ease-in-out infinite;
+}
+
 .nova-doodle-sparkle-1 {
   position: absolute;
   top: 48%;
@@ -846,6 +927,7 @@ button {
   width: 22px;
   height: 22px;
   color: var(--accent-purple);
+  animation: ambientFloat 4.8s ease-in-out infinite 0.8s;
 }
 
 .nova-doodle-sparkle-2 {
@@ -855,6 +937,7 @@ button {
   width: 24px;
   height: 24px;
   color: var(--accent-purple);
+  animation: ambientFloat 5.4s ease-in-out infinite 2s;
 }
 
 /* ==========================================================================
@@ -916,11 +999,12 @@ button {
   display: inline-block;
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  transition: transform var(--transition-normal);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
 }
 
 .footer-paper-sticker:hover {
-  transform: rotate(0deg) scale(1.02);
+  transform: rotate(0deg) translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.5);
 }
 
 .sticker-title-top {
@@ -951,6 +1035,12 @@ button {
   width: 22px;
   height: 22px;
   color: #111111;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+}
+
+.footer-paper-sticker:hover .sticker-smiley {
+  transform: rotate(18deg) scale(1.15);
+  color: var(--accent-purple);
 }
 
 /* Footer Middle: Description & WhatsApp */
@@ -1125,6 +1215,12 @@ button {
     padding-bottom: 24px;
   }
 
+  .hero-title {
+    font-size: clamp(2.2rem, 5.5vw, 3.2rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+
   .hero-portrait-img {
     max-height: 500px;
     margin: 0 auto;
@@ -1280,8 +1376,8 @@ button {
   }
 
   .hero-title {
-    font-size: clamp(2.35rem, 9.2vw, 3.2rem);
-    line-height: 1.08;
+    font-size: clamp(1.85rem, 7.5vw, 2.65rem);
+    line-height: 1.12;
     margin-bottom: 18px;
   }
 
@@ -1552,19 +1648,178 @@ button {
 
 /* Extra Small Phones (max-width: 480px) */
 @media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(1.65rem, 7.2vw, 2.05rem);
+    line-height: 1.14;
+    letter-spacing: -0.025em;
+  }
+
   .hero-actions {
     flex-direction: column;
+    gap: 12px;
   }
 
   .btn-explore,
-  .btn-instagram,
   .btn-explore-nova {
     width: 100%;
     justify-content: center;
     box-sizing: border-box;
   }
 
+  .hero-social-buttons {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .btn-instagram {
+    flex: 1;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 13px 18px;
+  }
+
+  .btn-hero-youtube {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
   .brand-logo {
     font-size: 1.75rem;
   }
 }
+
+/* ==========================================================================
+   Keyframes & Subtle Animations System
+   ========================================================================== */
+
+@keyframes ambientFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(4deg);
+  }
+}
+
+@keyframes ambientPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.14);
+    opacity: 1;
+  }
+}
+
+/* Button Micro-interactions */
+.btn-explore,
+.btn-explore-nova,
+.btn-header-talk,
+.btn-menu-talk,
+.btn-whatsapp {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-explore:hover,
+.btn-explore-nova:hover,
+.btn-header-talk:hover {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+.btn-explore svg,
+.btn-explore-nova svg,
+.btn-header-talk svg,
+.btn-menu-talk svg {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-explore:hover svg,
+.btn-explore-nova:hover svg {
+  transform: translateX(4px);
+}
+
+.btn-instagram svg {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-instagram:hover svg {
+  transform: scale(1.12) rotate(-6deg);
+}
+
+.btn-whatsapp:hover {
+  box-shadow: 0 10px 24px rgba(200, 255, 55, 0.35);
+}
+
+.btn-whatsapp svg {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-whatsapp:hover svg {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.btn-explore:active,
+.btn-instagram:active,
+.btn-explore-nova:active,
+.btn-whatsapp:active,
+.btn-header-talk:active {
+  transform: scale(0.97);
+}
+
+/* ==========================================================================
+   Scroll Reveal Entrance System
+   ========================================================================== */
+
+.reveal-init {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-init.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Entrance Delays for Grid Items */
+.reels-grid .reel-card:nth-child(1) { transition-delay: 0.04s; }
+.reels-grid .reel-card:nth-child(2) { transition-delay: 0.10s; }
+.reels-grid .reel-card:nth-child(3) { transition-delay: 0.16s; }
+.reels-grid .reel-card:nth-child(4) { transition-delay: 0.22s; }
+.reels-grid .reel-card:nth-child(5) { transition-delay: 0.28s; }
+.reels-grid .reel-card:nth-child(6) { transition-delay: 0.34s; }
+
+.moments-grid .moment-card:nth-child(1) { transition-delay: 0.04s; }
+.moments-grid .moment-card:nth-child(2) { transition-delay: 0.10s; }
+.moments-grid .moment-card:nth-child(3) { transition-delay: 0.16s; }
+.moments-grid .moment-card:nth-child(4) { transition-delay: 0.22s; }
+.moments-grid .moment-card:nth-child(5) { transition-delay: 0.28s; }
+
+.wts-services-grid .service-card:nth-child(1) { transition-delay: 0.06s; }
+.wts-services-grid .service-card:nth-child(2) { transition-delay: 0.14s; }
+.wts-services-grid .service-card:nth-child(3) { transition-delay: 0.22s; }
+.wts-services-grid .service-card:nth-child(4) { transition-delay: 0.30s; }
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-init {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .moment-doodle-left,
+  .moment-doodle-bottom-left,
+  .moment-doodle-right,
+  .moment-doodle-bottom-right,
+  .moments-sparkle-top,
+  .nova-burst-doodle,
+  .nova-doodle-sparkle-1,
+  .nova-doodle-sparkle-2 {
+    animation: none !important;
+  }
+}
+
