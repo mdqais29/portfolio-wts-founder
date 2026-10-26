@@ -1405,62 +1405,91 @@ button {
   /* Section Headings Scaled for Mobile */
   .section-heading-dark,
   .section-heading-light {
-    font-size: clamp(2.1rem, 8.5vw, 2.85rem);
-    line-height: 1.1;
+    font-size: clamp(1.85rem, 7.2vw, 2.35rem);
+    line-height: 1.12;
   }
 
   /* Hero Section */
   .hero-section {
-    padding-top: 24px;
+    padding-top: 18px;
     padding-bottom: 0;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 18px;
     align-items: end;
   }
 
   .hero-content {
     padding-right: 0;
     padding-top: 0;
-    padding-bottom: 24px;
+    padding-bottom: 12px;
   }
 
   .hero-badge-pill {
     font-size: 0.68rem;
     padding: 5px 14px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .hero-title {
-    font-size: clamp(1.85rem, 7.5vw, 2.65rem);
+    font-size: clamp(1.75rem, 7vw, 2.35rem);
     line-height: 1.12;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
   }
 
   .hero-bio {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 14px;
   }
 
   .hero-location {
-    font-size: 0.88rem;
-    margin-bottom: 24px;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
   }
 
   .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr auto;
     gap: 12px;
     width: 100%;
+    max-width: 440px;
   }
 
-  .btn-explore,
-  .btn-instagram {
+  .hero-social-buttons {
+    display: contents;
+  }
+
+  .btn-explore {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+    box-sizing: border-box;
     font-size: 0.9rem;
-    padding: 13px 22px;
+    padding: 12px 18px;
+  }
+
+  .btn-hero-youtube {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
+  .btn-instagram {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    padding: 12px 20px;
   }
 
   .hero-image-wrapper {
@@ -1470,7 +1499,7 @@ button {
   }
 
   .hero-portrait-img {
-    max-height: 420px;
+    max-height: 350px;
     width: 100%;
     margin: 0 auto;
     object-fit: contain;
@@ -1480,18 +1509,20 @@ button {
 
   /* My Work Section (Reels Touch-Snap Carousel) */
   .my-work-section {
-    padding: 64px 0 72px;
+    padding: 42px 0 44px;
   }
 
   .my-work-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
-    margin-bottom: 28px;
+    gap: 12px;
+    margin-bottom: 18px;
   }
 
   .my-work-desc {
     max-width: 100%;
+    font-size: 0.88rem;
+    line-height: 1.45;
     margin-bottom: 0;
   }
 
@@ -1499,12 +1530,12 @@ button {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 14px;
+    gap: 12px;
     margin-left: -20px;
     margin-right: -20px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 14px;
+    padding-bottom: 8px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
@@ -1514,25 +1545,27 @@ button {
   }
 
   .reel-card {
-    flex: 0 0 172px;
+    flex: 0 0 156px;
     aspect-ratio: 9 / 15.5;
     scroll-snap-align: start;
   }
 
   /* Moments & Connections Section (3:4 Touch-Snap Carousel) */
   .moments-section {
-    padding: 64px 0 72px;
+    padding: 42px 0 44px;
   }
 
   .moments-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
-    margin-bottom: 28px;
+    gap: 12px;
+    margin-bottom: 18px;
   }
 
   .moments-desc {
     max-width: 100%;
+    font-size: 0.88rem;
+    line-height: 1.45;
   }
 
   .moments-sparkle-top {
@@ -1553,12 +1586,12 @@ button {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 14px;
+    gap: 12px;
     margin-left: -20px;
     margin-right: -20px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 14px;
+    padding-bottom: 8px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
@@ -1568,35 +1601,31 @@ button {
   }
 
   .moment-card {
-    flex: 0 0 195px;
+    flex: 0 0 176px;
     aspect-ratio: 3 / 4;
     scroll-snap-align: start;
   }
 
-
-  .moments-section {
-    padding: 64px 0 44px;
-  }
-
   /* WTS Nova Section */
   .wts-nova-section {
-    padding: 48px 0 0;
+    padding: 38px 0 0;
   }
 
   .wts-nova-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 22px;
   }
 
   .wts-nova-title {
-    font-size: clamp(2.35rem, 9.2vw, 3.2rem);
-    margin-bottom: 16px;
+    font-size: clamp(2rem, 7.8vw, 2.5rem);
+    margin-bottom: 12px;
+    line-height: 1.1;
   }
 
   .wts-nova-desc {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 24px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 18px;
   }
 
   .nova-doodle-sparkle-1,
@@ -1606,22 +1635,31 @@ button {
 
   .wts-services-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 10px;
   }
 
-
   .service-card {
-    padding: 22px 18px;
+    padding: 16px 16px;
+  }
+
+  .service-card-title {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+
+  .service-card-desc {
+    font-size: 0.85rem;
+    line-height: 1.45;
   }
 
   .lime-wave-divider {
-    height: 42px;
-    margin-top: 24px;
+    height: 32px;
+    margin-top: 18px;
     margin-bottom: 0;
   }
 
   .lime-wave-svg {
-    height: 42px;
+    height: 32px;
     display: block;
     vertical-align: bottom;
     margin-bottom: 0;
@@ -1629,13 +1667,13 @@ button {
 
   /* Footer */
   .site-footer {
-    padding: 52px 0 28px;
+    padding: 38px 0 20px;
   }
 
   .footer-top-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
-    margin-bottom: 40px;
+    gap: 22px;
+    margin-bottom: 24px;
   }
 
   .footer-sticker-wrap {
@@ -1645,11 +1683,16 @@ button {
 
   .footer-paper-sticker {
     transform: rotate(-1deg);
-    padding: 22px 20px;
+    padding: 18px 16px;
     width: 100%;
     box-sizing: border-box;
     text-align: center;
     display: block;
+  }
+
+  .sticker-quote {
+    font-size: clamp(1.2rem, 5vw, 1.45rem);
+    margin-bottom: 8px;
   }
 
   .sticker-bottom-row {
@@ -1661,9 +1704,9 @@ button {
   }
 
   .footer-contact-text {
-    font-size: 0.92rem;
-    line-height: 1.6;
-    margin-bottom: 18px;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 14px;
   }
 
   .whatsapp-action-wrap {
@@ -1680,71 +1723,55 @@ button {
   }
 
   .footer-social-row {
-    gap: 12px;
-    margin-bottom: 18px;
+    gap: 10px;
+    margin-bottom: 14px;
   }
 
   .footer-social-btn {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
   }
 
   .footer-bottom-bar {
     flex-direction: column;
-    gap: 14px;
+    gap: 10px;
     align-items: center;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
   }
 
   .footer-back-to-top {
-    width: 42px;
-    height: 42px;
-    margin-top: 6px;
+    width: 40px;
+    height: 40px;
+    margin-top: 4px;
   }
 }
 
 /* Extra Small Phones (max-width: 480px) */
 @media (max-width: 480px) {
   .hero-title {
-    font-size: clamp(1.65rem, 7.2vw, 2.05rem);
+    font-size: clamp(1.6rem, 6.8vw, 1.95rem);
     line-height: 1.14;
     letter-spacing: -0.025em;
   }
 
-  .hero-actions {
-    flex-direction: column;
-    gap: 12px;
+  .section-heading-dark,
+  .section-heading-light {
+    font-size: clamp(1.65rem, 6.8vw, 2.05rem);
   }
 
-  .btn-explore,
+  .wts-nova-title {
+    font-size: clamp(1.75rem, 7.2vw, 2.15rem);
+  }
+
   .btn-explore-nova {
     width: 100%;
     justify-content: center;
     box-sizing: border-box;
   }
 
-  .hero-social-buttons {
-    display: flex;
-    width: 100%;
-    gap: 10px;
-  }
-
-  .btn-instagram {
-    flex: 1;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 13px 18px;
-  }
-
-  .btn-hero-youtube {
-    width: 48px;
-    height: 48px;
-    flex-shrink: 0;
-  }
-
   .brand-logo {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
   }
 }
 
