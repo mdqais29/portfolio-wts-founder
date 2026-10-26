@@ -569,7 +569,7 @@ button {
 
 .moments-section {
   background-color: var(--bg-cream);
-  padding: 96px 0 108px;
+  padding: 96px 0 80px;
   position: relative;
   overflow: hidden;
 }
@@ -677,12 +677,30 @@ button {
 
 
 /* ==========================================================================
+   Section Divider (Moments to WTS Nova)
+   ========================================================================== */
+
+.section-divider-wrap {
+  background-color: var(--bg-cream);
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.section-divider-line {
+  height: 1.5px;
+  background-color: rgba(17, 17, 17, 0.12);
+  width: 100%;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
    WTS Nova Section
    ========================================================================== */
 
 .wts-nova-section {
   background-color: var(--bg-cream);
-  padding: 96px 0 0;
+  padding: 80px 0 0;
   position: relative;
 }
 
@@ -1382,9 +1400,13 @@ button {
   }
 
 
+  .moments-section {
+    padding: 64px 0 44px;
+  }
+
   /* WTS Nova Section */
   .wts-nova-section {
-    padding: 64px 0 36px;
+    padding: 48px 0 0;
   }
 
   .wts-nova-grid {
@@ -1413,9 +1435,6 @@ button {
     gap: 14px;
   }
 
-  .wts-nova-section {
-    padding: 64px 0 0;
-  }
 
   .service-card {
     padding: 22px 18px;
