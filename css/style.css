@@ -392,6 +392,14 @@ button {
   margin-bottom: 24px;
 }
 
+.hero-meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
 .hero-location {
   display: inline-flex;
   align-items: center;
@@ -399,13 +407,79 @@ button {
   font-size: 0.92rem;
   font-weight: 700;
   color: #222222;
-  margin-bottom: 32px;
+  margin-bottom: 0;
 }
 
 .hero-location svg {
   width: 16px;
   height: 16px;
   color: #111111;
+}
+
+/* 23K+ Family on Instagram Community Badge */
+.hero-community-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FFFFFF;
+  color: #111111;
+  border: 1.5px solid rgba(17, 17, 17, 0.12);
+  border-radius: 9999px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.hero-community-badge:hover {
+  transform: translateY(-2px);
+  border-color: #E1306C;
+  box-shadow: 0 4px 14px rgba(225, 48, 108, 0.14);
+}
+
+.community-pulse-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #E1306C;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 0 rgba(225, 48, 108, 0.7);
+  animation: communityPulse 2.2s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes communityPulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(225, 48, 108, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5px rgba(225, 48, 108, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(225, 48, 108, 0);
+  }
+}
+
+.community-ig-icon {
+  width: 14px;
+  height: 14px;
+  color: #E1306C;
+  flex-shrink: 0;
+}
+
+.community-badge-text {
+  color: #333333;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.community-badge-text strong {
+  color: #111111;
+  font-weight: 800;
 }
 
 .hero-actions {
@@ -1445,9 +1519,19 @@ button {
     margin-bottom: 14px;
   }
 
-  .hero-location {
-    font-size: 0.85rem;
+  .hero-meta-row {
+    gap: 10px;
     margin-bottom: 16px;
+  }
+
+  .hero-location {
+    font-size: 0.84rem;
+    margin-bottom: 0;
+  }
+
+  .hero-community-badge {
+    font-size: 0.8rem;
+    padding: 5px 12px;
   }
 
   .hero-actions {
