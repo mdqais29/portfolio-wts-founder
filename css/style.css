@@ -292,7 +292,27 @@ button {
   overflow: hidden;
 }
 
+/* Subtle background grid pattern */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 42px 42px;
+  background-image:
+    linear-gradient(to right, rgba(17, 17, 17, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.055) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse 95% 85% at 50% 35%, #000 45%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 95% 85% at 50% 35%, #000 45%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 .hero-grid {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1.15fr 0.95fr;
   align-items: end;
